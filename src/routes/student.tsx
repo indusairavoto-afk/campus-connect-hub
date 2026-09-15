@@ -38,7 +38,7 @@ import {
 } from "@/components/portal/data";
 import campusImage from "@/assets/campus.jpg";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/student")({
   head: () => ({
     meta: [
       { title: "Student Complaint Portal — File & Track Campus Complaints" },
@@ -54,10 +54,10 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: Index,
+  component: StudentPortal,
 });
 
-function Index() {
+function StudentPortal() {
   const [complaints, setComplaints] = useState<Complaint[]>(initialComplaints);
   const [activeNav, setActiveNav] = useState("Home");
   const [query, setQuery] = useState("");
