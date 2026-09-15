@@ -113,7 +113,7 @@ function AdminDashboard() {
         .includes(q);
     });
     return [...rows].sort((a, b) => {
-      if (sortBy === "urgency") return urgencyRank[a.urgency] - urgencyRank[b.urgency];
+      if (sortBy === "urgency") return (urgencyRank[a.urgency] ?? 9) - (urgencyRank[b.urgency] ?? 9);
       if (sortBy === "status") return statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status);
       return 0;
     });
