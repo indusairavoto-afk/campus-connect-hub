@@ -30,7 +30,7 @@ export function PortalSidebar({
   onSelect: (label: string) => void;
 }) {
   return (
-    <aside className="hidden w-[264px] shrink-0 flex-col justify-between border-r border-border bg-sidebar lg:flex">
+    <aside className="sticky top-0 hidden h-screen w-[264px] shrink-0 flex-col justify-between border-r border-border bg-sidebar lg:flex">
       <div>
         <div className="flex items-center gap-3 px-6 py-6">
           <span className="flex size-10 items-center justify-center rounded-xl bg-primary/12 text-primary">
